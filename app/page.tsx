@@ -12,10 +12,9 @@ export default function Home() {
     <RedocStandalone
       specUrl="/api/openapi"
       options={{
-        hideDownloadButton: false,
+        hideDownloadButtons: false,
         expandResponses: "200",
         pathInMiddlePanel: true,
-        // @ts-expect-error theme is valid at runtime but missing from this version's types
         theme: {
           colors: { primary: { main: "#3b82f6" } },
           backgroundColor: "#0a0a0a",
