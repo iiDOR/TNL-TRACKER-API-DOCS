@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Swagger UI removed — using Redoc which has built-in dark mode theming */
+/* ── Legacy swagger overrides (unused) ────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  .swagger-ui,
+  .swagger-ui .wrapper,
+  .swagger-ui .opblock-tag-section {
+    background: #0a0a0a;
+    color: #ededed;
+  }
+
+  .swagger-ui .topbar { background: #111; }
+
+  .swagger-ui .info .title,
+  .swagger-ui .info p,
+  .swagger-ui .info li,
+  .swagger-ui .info table thead tr th,
+  .swagger-ui .info table tbody tr td,
+  .swagger-ui .opblock-tag,
+  .swagger-ui .opblock-summary-description,
+  .swagger-ui .opblock-description-wrapper p,
+  .swagger-ui .tab li,
+  .swagger-ui label,
+  .swagger-ui .model-title,
+  .swagger-ui .model,
+  .swagger-ui table thead tr th,
+  .swagger-ui table tbody tr td,
+  .swagger-ui .parameter__name,
+  .swagger-ui .parameter__type,
+  .swagger-ui .response-col_status,
+  .swagger-ui .response-col_description,
+  .swagger-ui .markdown p,
+  .swagger-ui .markdown li,
+  .swagger-ui section.models h4,
+  .swagger-ui .prop-type,
+  .swagger-ui .prop-format { color: #ededed; }
+
+  /* operation blocks */
+  .swagger-ui .opblock {
+    background: #161616;
+    border-color: #333;
+  }
+  .swagger-ui .opblock .opblock-summary {
+    background: #1a1a1a;
+    border-color: #333;
+  }
+  .swagger-ui .opblock.opblock-get    { border-color: #3b82f6; background: rgba(59,130,246,.08); }
+  .swagger-ui .opblock.opblock-post   { border-color: #22c55e; background: rgba(34,197,94,.08);  }
+  .swagger-ui .opblock.opblock-put    { border-color: #f97316; background: rgba(249,115,22,.08); }
+  .swagger-ui .opblock.opblock-patch  { border-color: #a855f7; background: rgba(168,85,247,.08); }
+  .swagger-ui .opblock.opblock-delete { border-color: #ef4444; background: rgba(239,68,68,.08);  }
+
+  .swagger-ui .opblock-body,
+  .swagger-ui .opblock-section,
+  .swagger-ui .responses-wrapper,
+  .swagger-ui .response-body { background: #111; }
+
+  /* inputs & buttons */
+  .swagger-ui input[type=text],
+  .swagger-ui input[type=password],
+  .swagger-ui textarea,
+  .swagger-ui select {
+    background: #1e1e1e;
+    color: #ededed;
+    border-color: #444;
+  }
+  .swagger-ui .btn { background: #222; color: #ededed; border-color: #444; }
+  .swagger-ui .btn.execute { background: #3b82f6; color: #fff; border-color: #3b82f6; }
+  .swagger-ui .btn.authorize { background: #22c55e; color: #fff; border-color: #22c55e; }
+  .swagger-ui .btn.cancel { background: #ef4444; color: #fff; border-color: #ef4444; }
+
+  /* models section */
+  .swagger-ui section.models,
+  .swagger-ui .model-box { background: #111; border-color: #333; }
+  .swagger-ui .model-container { background: #161616; }
+
+  /* scheme/server bar */
+  .swagger-ui .scheme-container { background: #111 !important; box-shadow: none !important; border-bottom: 1px solid #333; }
+  .swagger-ui .scheme-container .schemes { background: #111; }
+  .swagger-ui .servers-title,
+  .swagger-ui .servers > label { color: #ededed; }
+  .swagger-ui .servers > label select {
+    background: #1e1e1e;
+    color: #ededed;
+    border-color: #444;
+  }
+
+  /* auth modal */
+  .swagger-ui .dialog-ux .modal-ux {
+    background: #161616;
+    border-color: #333;
+  }
+  .swagger-ui .dialog-ux .modal-ux-header { background: #111; border-color: #333; }
+  .swagger-ui .dialog-ux .modal-ux-header h3 { color: #ededed; }
+  .swagger-ui .dialog-ux .modal-ux-content p,
+  .swagger-ui .dialog-ux .modal-ux-content h4,
+  .swagger-ui .dialog-ux .modal-ux-content label,
+  .swagger-ui .dialog-ux .modal-ux-content small,
+  .swagger-ui .dialog-ux .modal-ux-content code { color: #ccc; }
+  .swagger-ui .dialog-ux .modal-ux-content { background: #161616; }
+  .swagger-ui .auth-container,
+  .swagger-ui .auth-container h4,
+  .swagger-ui .auth-container p,
+  .swagger-ui .auth-container label,
+  .swagger-ui .auth-container small,
+  .swagger-ui .auth-container code,
+  .swagger-ui .auth-container .wrapper { color: #ccc; background: transparent; }
+  .swagger-ui .auth-container input[type=text],
+  .swagger-ui .auth-container input[type=password] {
+    background: #1e1e1e;
+    color: #ededed;
+    border-color: #555;
+  }
+  .swagger-ui .auth-container .scopes h2 { color: #ededed; }
+
+  /* code / response blocks */
+  .swagger-ui .highlight-code,
+  .swagger-ui .microlight { background: #111 !important; color: #7dd3fc !important; }
+
+  /* links */
+  .swagger-ui a { color: #60a5fa; }
+  .swagger-ui a:hover { color: #93c5fd; }
+
+  /* expand/collapse arrows */
+  .swagger-ui .arrow { filter: invert(1); }
+
+  /* scrollbar */
+  .swagger-ui ::-webkit-scrollbar { width: 6px; height: 6px; }
+  .swagger-ui ::-webkit-scrollbar-track { background: #111; }
+  .swagger-ui ::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+}
