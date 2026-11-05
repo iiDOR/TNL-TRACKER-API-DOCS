@@ -22,7 +22,7 @@ export default function Home() {
           rightPanel: { backgroundColor: "#161616" },
           typography: { fontFamily: "inherit", fontSize: "14px" },
         },
-      }}
+      } as any}
     />
   );
 }
