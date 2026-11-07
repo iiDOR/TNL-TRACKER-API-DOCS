@@ -1,3 +1,3 @@
-// Swagger 2.0 spec from api.tamilnadulogistics.in — stored as openapi.json
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-export const openApiSpec = require('../openapi.json');
+// Spec is served at runtime via app/api/openapi/route.ts (fs.readFileSync on openapi.json)
+// Not imported — kept for reference only.
+export const openApiSpec = {};
